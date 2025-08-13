@@ -7,7 +7,11 @@ class Personagem {
     }
 
     atacar(potencia) {
-        console.log(`O personagem ${this.nome} atacou, sua magnitude equivale a ${potencia}`)
+        if (potencia > 0) {
+            console.log(`O personagem ${this.nome} atacou, sua magnitude equivale a ${potencia}`)
+        } else {
+            console.log(`O personagem ${this.nome} não poderá atacar com a potência fornecida, tente um número maior.`)
+        }
     }
 
     mostrarInfo() {
@@ -21,5 +25,6 @@ class Personagem {
         console.log(string)
     }
 }
+
 
 module.exports = Personagem
